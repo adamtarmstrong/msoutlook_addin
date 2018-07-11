@@ -1,0 +1,68 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license. -->
+<!-- See LICENSE in the project root for license information -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Office Addin Playground Auth</title>
+
+    <!-- Fabric for button styles -->
+    <link rel="stylesheet" href="https://unpkg.com/office-ui-fabric-js@1.4.0/dist/css/fabric.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/office-ui-fabric-js@1.4.0/dist/css/fabric.components.min.css" />
+
+    <!-- CSS styling -->
+    <style type="text/css">
+        #login-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .login {
+            margin: 15px 4px;
+            width: 200px;
+        }
+        #output {
+            white-space: pre-line;
+            word-break: break-all;
+            width: calc(100% - 40px);
+            min-height: 150px;
+            background-color: #333;
+            color: #EFEFEF;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body class="ms-font-m ms-welcome">
+        <h1 class="ms-font-su">Demo v12</h1>
+        <div id="login-list">
+          <button class="login ms-Button"
+                  data-provider="testButton">
+            <span class="ms-Button-label">Get Token</span>
+          </button>
+      
+          <h3 class="ms-font-l ms-fontWeight-semibold">Output:</h3>
+          <pre id="output"></pre>
+        </div>
+      
+        <!-- JQuery library -->
+        <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
+      
+        <!-- SHIM library required by Office Helpers -->
+        <script src="https://unpkg.com/core-js@2.5.1/client/core.js"></script>
+      
+        <!-- Office Helpers -->
+        <!-- Use local reference or latest version -->
+        <!-- <script src="https://unpkg.com/@microsoft/office-js-helpers/dist/office.helpers.js"></script> -->
+        <script src="https://unpkg.com/@microsoft/office-js-helpers@1.0.0/dist/office.helpers.min.js"></script>
+      
+        <!-- Application Script -->
+        <script src="app.js"></script>
+
+</body>
+
+</html>
