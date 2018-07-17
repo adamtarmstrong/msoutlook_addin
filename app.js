@@ -2,7 +2,7 @@
 (function ($) {
     // Just a random helper to prettify json
     function prettify(data) {
-      let json = JSON.stringify(data);
+      var json = JSON.stringify(data);
       json = json.replace(/{/g, "{\n\n\t");
       json = json.replace(/,/g, ",\n\t");
       json = json.replace(/}/g, ",\n\n}");
@@ -11,7 +11,7 @@
   
     $("document").ready(function () {
       // Get the output pre
-      let output = $("#output");
+      var output = $("#output");
 
       // Determine if we are running inside of an authentication dialog
       // If so then just terminate the running function
@@ -24,7 +24,7 @@
       }
   
       // Create a new instance of Authenticator
-      let authenticator = new OfficeHelpers.Authenticator();
+      var authenticator = new OfficeHelpers.Authenticator();
       
       // Register our providers accordingly
       authenticator.endpoints.registerAzureADAuth("CLIENT_ID_GUID_HERE", "TENANT_ID_GUID_HERE", {
